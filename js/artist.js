@@ -82,7 +82,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set Page Title
     document.title = `Songscape - Artist Profile: ${artistName}`;
 
-    const popularSongs = songs.filter(song => song.artistId === selectedArtist.id);
+    const popularSongs = songs
+        .filter(song => song.artistId === selectedArtist.id)
+        .map(song => ({
+            ...song,
+            playable: true,
+            duration: song.duration || (song.id === 1 ? '0:25' : song.id === 2 ? '0:20' : '0:30')
+        }));
 
     // 4. Render Layout
     const detailsContainer = document.getElementById('artist-details-container');
