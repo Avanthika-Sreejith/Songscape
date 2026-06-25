@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Songscape music library. Filter tracks by artist, search for songs, manage favorites, and listen using our floating media player.">
+    <title>Songscape - Music Library</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Music Page CSS -->
+    <link rel="stylesheet" href="css/music.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-headphones-alt"></i>
+                <span>Songscape</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="music.html" class="nav-link">Music</a>
+                <a href="artist.html" class="nav-link">Artist</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" aria-label="Open navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="music-layout">
+        <div class="container">
+            <h1 class="section-title">Music Library</h1>
+
+            <!-- Search, Filters, Tabs -->
+            <div class="filter-bar glass-card">
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search by song or artist name...">
+                </div>
+
+                <!-- Artist Filter Dropdown -->
+                <select id="artist-filter" class="filter-select">
+                    <option value="">All Artists</option>
+                    <!-- Options populated by JS -->
+                </select>
+
+                <!-- Favorites / All Songs Toggle -->
+                <div class="playlist-tabs">
+                    <button id="tab-all" class="tab-btn active">All Songs</button>
+                    <button id="tab-favorites" class="tab-btn">
+                        <i class="fas fa-heart" style="color: var(--heart-color); margin-right: 5px;"></i> Favorites
+                    </button>
+                </div>
+            </div>
+
+            <!-- Songs Grid -->
+            <div id="songs-grid" class="songs-grid">
+                <!-- Dynamic cards populated by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Persistent Floating Player -->
+    <div id="floating-player" class="floating-player">
+        <div class="player-container">
+            <!-- Left: Song details -->
+            <div class="player-song-info">
+                <img id="player-img" class="player-img" src="images/covers/midnight_glow.jpg" alt="Active Song Cover">
+                <div class="player-meta">
+                    <div id="player-title" class="player-title">Song Title</div>
+                    <div id="player-artist" class="player-artist">Artist Name</div>
+                </div>
+            </div>
+
+            <!-- Middle: Main Controls & Timeline -->
+            <div class="player-controls">
+                <div class="player-buttons">
+                    <button id="player-prev-btn" class="player-btn" aria-label="Previous track">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="player-play-btn" class="player-btn play-pause-btn" aria-label="Play/Pause">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="player-next-btn" class="player-btn" aria-label="Next track">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                </div>
+
+                <!-- Progress/Timeline -->
+                <div class="player-timeline">
+                    <span id="player-time-current" class="time-label">0:00</span>
+                    <div class="slider-container" id="player-slider-container">
+                        <input type="range" id="player-progress" class="progress-slider" min="0" max="100" value="0">
+                        <div id="player-slider-fill" class="slider-fill"></div>
+                    </div>
+                    <span id="player-time-duration" class="time-label">0:00</span>
+                </div>
+            </div>
+
+            <!-- Right: Volume controls -->
+            <div class="player-volume">
+                <button id="player-volume-btn" class="volume-btn" aria-label="Mute/Unmute">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-slider-container" id="player-volume-slider-container">
+                    <input type="range" id="player-volume-slider" class="volume-slider" min="0" max="100" value="70">
+                    <div id="player-volume-fill" class="volume-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-headphones-alt"></i>
+                    <span>Songscape</span>
+                </a>
+                <p>Experience the future of music templating. Premium styling, modern responsiveness, and smooth audio streaming on any screen size.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="music.html">Music Library</a></li>
+                    <li><a href="artist.html">Featured Artist</a></li>
+                    <li><a href="about.html">About Project</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="music.html">Albums</a></li>
+                    <li><a href="music.html">Popular Songs</a></li>
+                    <li><a href="artist.html?id=1">Luna Eclipse</a></li>
+                    <li><a href="artist.html?id=2">Kai Ryo</a></li>
+                    <li><a href="artist.html?id=3">Cyber Punk</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Sonic Boulevard, Music City, MC 10101</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (555) 019-2831</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@songscape.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Songscape Music. All Rights Reserved. Crafted for web excellence.</p>
+            <div class="footer-bottom-links">
+                <a href="#" style="margin-right: 15px;">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- HTML5 Audio Element (Hidden) -->
+    <audio id="main-audio-element" preload="auto"></audio>
+
+    <!-- Shared Main JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- Music Page JavaScript -->
+    <script src="js/music.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Songscape - A premium responsive music website template. Explore popular songs, album details, and artist bios.">
+    <title>Songscape - Discover Your Sound</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Home Page CSS -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-headphones-alt"></i>
+                <span>Songscape</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="music.html" class="nav-link">Music</a>
+                <a href="artist.html" class="nav-link">Artist</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" aria-label="Open navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner Section -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="floating-orb orb-1"></div>
+                <div class="floating-orb orb-2"></div>
+                <div class="floating-orb orb-3"></div>
+            </div>
+            
+            <div class="container hero-content">
+                <span class="hero-tagline">Feel the Vibe</span>
+                <h1 class="hero-title">Your Ultimate Soundscape Awaits</h1>
+                <p class="hero-description">
+                    Discover handpicked playlists, trending tracks, and deep dives into independent artists. Completely responsive, custom crafted, and designed to move you.
+                </p>
+                <div class="hero-buttons">
+                    <a href="music.html" class="btn btn-primary">
+                        <i class="fas fa-play"></i> Explore Music
+                    </a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Highlights Section -->
+        <section class="section container">
+            <h2 class="section-title">Experience the Difference</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Stream high-quality music instantly on any device with zero buffering. Optimized templates keep things flowing smoothly.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Ultimate Control</h3>
+                    <p>Search, filter by artist, and manage a personalized playlist of favorite songs with ease. Fully responsive layout.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Aesthetic Themes</h3>
+                    <p>Switch dynamically between dark mode obsidian colors and a soft light theme for comfortable evening browsing.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Tracks Section -->
+        <section class="section" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <h2 class="section-title">Featured Tracks</h2>
+                
+                <div class="featured-music-grid">
+                    <!-- Song Card 1 -->
+                    <div class="featured-card glass-card">
+                        <div class="featured-img-container">
+                            <img src="images/covers/midnight_glow.jpg" alt="Midnight Glow" onerror="this.src='https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?w=500&q=80'">
+                            <div class="featured-overlay">
+                                <a href="music.html?play=1" class="play-hover-btn" aria-label="Play song">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Midnight Glow</h3>
+                            <p>Luna Eclipse</p>
+                            <div class="featured-action">
+                                <a href="artist.html?id=1" class="view-artist-btn">View Artist</a>
+                                <span class="badge" style="background: rgba(var(--accent-rgb), 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; color: var(--accent);">Ambient</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Song Card 2 -->
+                    <div class="featured-card glass-card">
+                        <div class="featured-img-container">
+                            <img src="images/covers/ocean_breeze.jpg" alt="Ocean Breeze" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80'">
+                            <div class="featured-overlay">
+                                <a href="music.html?play=2" class="play-hover-btn" aria-label="Play song">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Ocean Breeze</h3>
+                            <p>Kai Ryo</p>
+                            <div class="featured-action">
+                                <a href="artist.html?id=2" class="view-artist-btn">View Artist</a>
+                                <span class="badge" style="background: rgba(var(--accent-rgb), 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; color: var(--accent);">Acoustic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Song Card 3 -->
+                    <div class="featured-card glass-card">
+                        <div class="featured-img-container">
+                            <img src="images/covers/neon_horizon.jpg" alt="Neon Horizon" onerror="this.src='https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&q=80'">
+                            <div class="featured-overlay">
+                                <a href="music.html?play=3" class="play-hover-btn" aria-label="Play song">
+                                    <i class="fas fa-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="featured-info">
+                            <h3>Neon Horizon</h3>
+                            <p>Cyber Punk</p>
+                            <div class="featured-action">
+                                <a href="artist.html?id=3" class="view-artist-btn">View Artist</a>
+                                <span class="badge" style="background: rgba(var(--accent-rgb), 0.1); padding: 4px 10px; border-radius: 20px; font-size: 0.75rem; color: var(--accent);">Synthwave</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section container cta">
+            <div class="cta-card glass-card">
+                <div class="cta-content">
+                    <h2>Ready to Find Your Rhythm?</h2>
+                    <p>Jump directly into our immersive library, filter by your favorite artists, or build your customizable playlist.</p>
+                    <a href="music.html" class="btn btn-primary">
+                        <i class="fas fa-compact-disc"></i> Go to Music Page
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-headphones-alt"></i>
+                    <span>Songscape</span>
+                </a>
+                <p>Experience the future of music templating. Premium styling, modern responsiveness, and smooth audio streaming on any screen size.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="music.html">Music Library</a></li>
+                    <li><a href="artist.html">Featured Artist</a></li>
+                    <li><a href="about.html">About Project</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="music.html">Albums</a></li>
+                    <li><a href="music.html">Popular Songs</a></li>
+                    <li><a href="artist.html?id=1">Luna Eclipse</a></li>
+                    <li><a href="artist.html?id=2">Kai Ryo</a></li>
+                    <li><a href="artist.html?id=3">Cyber Punk</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Sonic Boulevard, Music City, MC 10101</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (555) 019-2831</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@songscape.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Songscape Music. All Rights Reserved. Crafted for web excellence.</p>
+            <div class="footer-bottom-links">
+                <a href="#" style="margin-right: 15px;">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

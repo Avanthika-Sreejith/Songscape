@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Songscape - Get in touch with our team. Use our validated contact form for queries, licensing, or feedback.">
+    <title>Songscape - Get in Touch</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Contact Page CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-headphones-alt"></i>
+                <span>Songscape</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="music.html" class="nav-link">Music</a>
+                <a href="artist.html" class="nav-link">Artist</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" aria-label="Open navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact-layout">
+        <div class="container">
+            <h1 class="section-title">Contact Us</h1>
+
+            <div class="contact-grid">
+                <!-- Left Column: Contact info details -->
+                <div class="contact-info-card glass-card">
+                    <div>
+                        <h2>Let's Connect</h2>
+                        <p>Have questions about Songscape? Want to list your music, suggest features, or licensing? Reach out directly using our credentials.</p>
+                        
+                        <ul class="contact-details-list">
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <div>
+                                    <span class="info-title">Phone Support</span>
+                                    <span class="info-desc">+1 (555) 019-2831</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="info-title">Email Us</span>
+                                    <span class="info-desc">hello@songscape.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <span class="info-title">Headquarters</span>
+                                    <span class="info-desc">123 Sonic Boulevard, MC 10101</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <p style="margin-bottom: 15px; font-size: 0.9rem;">Follow us on social channels:</p>
+                        <div class="footer-socials">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Form -->
+                <div class="contact-form-card glass-card">
+                    <h2>Send Message</h2>
+                    
+                    <form id="contact-form" novalidate>
+                        <!-- Form row for Name and Email -->
+                        <div class="form-group-row">
+                            <!-- Name -->
+                            <div class="form-group" id="group-name">
+                                <label for="form-name">Name *</label>
+                                <input type="text" id="form-name" placeholder="John Doe">
+                                <div class="form-error-msg" id="error-name">Name is required.</div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="form-group" id="group-email">
+                                <label for="form-email">Email Address *</label>
+                                <input type="email" id="form-email" placeholder="john@example.com">
+                                <div class="form-error-msg" id="error-email">Please enter a valid email.</div>
+                            </div>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="form-group" id="group-phone">
+                            <label for="form-phone">Phone Number (10 Digits) *</label>
+                            <input type="tel" id="form-phone" placeholder="9876543210" maxlength="10">
+                            <div class="form-error-msg" id="error-phone">Phone must be exactly 10 digits (numeric only).</div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group full-width" id="group-message">
+                            <label for="form-message">Message (Max 200 words) *</label>
+                            <textarea id="form-message" placeholder="Type your message here..."></textarea>
+                            <div class="form-helper">
+                                <span class="form-error-msg" id="error-message" style="margin-top: 0;">Message is required.</span>
+                                <span class="word-counter" id="word-counter-display">0 / 200 words</span>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-headphones-alt"></i>
+                    <span>Songscape</span>
+                </a>
+                <p>Experience the future of music templating. Premium styling, modern responsiveness, and smooth audio streaming on any screen size.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="music.html">Music Library</a></li>
+                    <li><a href="artist.html">Featured Artist</a></li>
+                    <li><a href="about.html">About Project</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="music.html">Albums</a></li>
+                    <li><a href="music.html">Popular Songs</a></li>
+                    <li><a href="artist.html?id=1">Luna Eclipse</a></li>
+                    <li><a href="artist.html?id=2">Kai Ryo</a></li>
+                    <li><a href="artist.html?id=3">Cyber Punk</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Sonic Boulevard, Music City, MC 10101</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (555) 019-2831</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@songscape.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Songscape Music. All Rights Reserved. Crafted for web excellence.</p>
+            <div class="footer-bottom-links">
+                <a href="#" style="margin-right: 15px;">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shared Main JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- Contact Validation JavaScript -->
+    <script src="js/contact.js"></script>
+</body>
+</html>

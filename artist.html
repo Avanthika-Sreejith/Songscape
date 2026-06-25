@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artist Details Page - Songscape. View the artist biography, list of popular songs, contact details, and follow their social channels.">
+    <title>Songscape - Artist Profile</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Artist Page CSS -->
+    <link rel="stylesheet" href="css/artist.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-headphones-alt"></i>
+                <span>Songscape</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="music.html" class="nav-link">Music</a>
+                <a href="artist.html" class="nav-link">Artist</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="hamburger" aria-label="Open navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Dynamic Container -->
+    <main class="artist-layout">
+        <div class="container">
+            <!-- Back to Music Button -->
+            <div style="margin-bottom: 25px;">
+                <a href="music.html" class="btn btn-secondary" style="padding: 8px 20px; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i> Back to Library
+                </a>
+            </div>
+
+            <!-- This container will be populated dynamically by artist.js -->
+            <div id="artist-details-container">
+                <div style="text-align: center; padding: 100px 0;">
+                    <i class="fas fa-spinner fa-spin" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
+                    <p>Loading artist details...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-headphones-alt"></i>
+                    <span>Songscape</span>
+                </a>
+                <p>Experience the future of music templating. Premium styling, modern responsiveness, and smooth audio streaming on any screen size.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="music.html">Music Library</a></li>
+                    <li><a href="artist.html">Featured Artist</a></li>
+                    <li><a href="about.html">About Project</a></li>
+                    <li><a href="contact.html">Get in Touch</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="music.html">Albums</a></li>
+                    <li><a href="music.html">Popular Songs</a></li>
+                    <li><a href="artist.html?id=1">Luna Eclipse</a></li>
+                    <li><a href="artist.html?id=2">Kai Ryo</a></li>
+                    <li><a href="artist.html?id=3">Cyber Punk</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Sonic Boulevard, Music City, MC 10101</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+1 (555) 019-2831</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@songscape.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Songscape Music. All Rights Reserved. Crafted for web excellence.</p>
+            <div class="footer-bottom-links">
+                <a href="#" style="margin-right: 15px;">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- HTML5 Audio Element for Sidebar Player -->
+    <audio id="artist-audio-element" preload="auto"></audio>
+
+    <!-- Shared Main JavaScript -->
+    <script src="js/main.js"></script>
+    <!-- Artist Page JavaScript -->
+    <script src="js/artist.js"></script>
+</body>
+</html>

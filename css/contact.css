@@ -1,0 +1,184 @@
+/* Contact Page Styling */
+
+.contact-layout {
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Contact Info card (Left) */
+.contact-info-card {
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-info-card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.contact-info-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+.contact-details-list li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-details-list li:last-child {
+    margin-bottom: 0;
+}
+
+.contact-details-list i {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: rgba(var(--accent-rgb), 0.1);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.contact-details-list .info-title {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.contact-details-list .info-desc {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* Contact Form card (Right) */
+.contact-form-card {
+    padding: 40px;
+}
+
+.contact-form-card h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group.full-width {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.15);
+}
+
+.form-group textarea {
+    resize: none;
+    height: 150px;
+}
+
+/* Validation helper elements */
+.form-helper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: var(--text-secondary);
+}
+
+.word-counter {
+    font-weight: 500;
+}
+
+.word-counter.limit-near {
+    color: #ffb703;
+}
+
+.word-counter.limit-exceeded {
+    color: #ff3366;
+}
+
+/* Input validation states */
+.form-group.error input, .form-group.error textarea {
+    border-color: #ff3366;
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.15);
+}
+
+.form-error-msg {
+    display: none;
+    color: #ff3366;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.form-group.error .form-error-msg {
+    display: block;
+}
+
+/* Responsive details for Contact Page */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .contact-form-card, .contact-info-card {
+        padding: 30px 20px;
+    }
+}
