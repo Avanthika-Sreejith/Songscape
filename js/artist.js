@@ -39,50 +39,46 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Get Songs Data
     const songs = JSON.parse(localStorage.getItem('songscape_songs')) || defaultSongs;
 
+    const artists = Array.from(
+        songs.reduce((map, song) => {
+            if (!map.has(song.artistId)) {
+                map.set(song.artistId, {
+                    id: song.artistId,
+                    name: song.artist,
+                    genre: song.genre,
+                    bio: song.bio,
+                    phone: song.artistPhone,
+                    avatar: `images/artists/${song.artistId === 1 ? 'luna_eclipse.jpg' : song.artistId === 2 ? 'kai_ryo.jpg' : 'cyber_punk.jpg'}`
+                });
+            }
+            return map;
+        }, new Map()).values()
+    );
+
     // 2. Parse Query Params
     const urlParams = new URLSearchParams(window.location.search);
-    let artistId = parseInt(urlParams.get('id'));
+    const artistIdParam = parseInt(urlParams.get('id'));
 
-    // Fallback: Check localStorage selection or default to 1
-    if (isNaN(artistId)) {
-        artistId = parseInt(localStorage.getItem('songscape_selected_artist')) || 1;
+    if (isNaN(artistIdParam)) {
+        renderArtistList(artists);
+        return;
     }
 
-    // 3. Find Artist details
-    const activeSong = songs.find(s => s.artistId === artistId) || songs[0];
-    const artistName = activeSong.artist;
-    const artistBio = activeSong.bio;
-    const artistPhone = activeSong.artistPhone;
-    const artistGenre = activeSong.genre;
-    
+    const selectedArtist = artists.find(a => a.id === artistIdParam) || artists[0];
+    const artistName = selectedArtist.name;
+    const artistBio = selectedArtist.bio;
+    const artistPhone = selectedArtist.phone;
+    const artistGenre = selectedArtist.genre;
+    const avatarPath = selectedArtist.avatar;
+    const activeSong = songs.find(s => s.artistId === selectedArtist.id) || songs[0];
+
     // Set Page Title
     document.title = `Songscape - Artist Profile: ${artistName}`;
 
-    // Define Artist Avatar image paths mapping
-    let avatarPath = "images/artists/luna_eclipse.jpg";
-    if (artistId === 2) avatarPath = "images/artists/kai_ryo.jpg";
-    if (artistId === 3) avatarPath = "images/artists/cyber_punk.jpg";
-
-    // Define simulated popular songs for the artist
-    let popularSongs = [];
-    if (artistId === 1) {
-        popularSongs = [
-            { id: 1, name: "Midnight Glow", duration: "0:25", playable: true, audio: "audio/tracks/midnight_glow.mp3", cover: "images/covers/midnight_glow.jpg" },
-            { id: 4, name: "Starlit Nights", duration: "0:25", playable: true, audio: "audio/tracks/starlit_nights.mp3", cover: "images/covers/starlit_nights.jpg" },
-            { id: 5, name: "Nebula Dream", duration: "0:25", playable: true, audio: "audio/tracks/nebula_dream.mp3", cover: "images/covers/nebula_dream.jpg" }
-        ];
-    } else if (artistId === 2) {
-        popularSongs = [
-            { id: 2, name: "Ocean Breeze", duration: "0:20", playable: true, audio: "audio/tracks/ocean_breeze.mp3", cover: "images/covers/ocean_breeze.jpg" },
-            { id: 6, name: "Sunset Song", duration: "0:20", playable: true, audio: "audio/tracks/sunset_song.mp3", cover: "images/covers/sunset_song.jpg" },
-            { id: 7, name: "Acoustic Whispers", duration: "0:20", playable: true, audio: "audio/tracks/acoustic_whispers.mp3", cover: "images/covers/acoustic_whispers.jpg" }
-        ];
-    } else {
-        popularSongs = [
-            { id: 3, name: "Neon Horizon", duration: "0:15", playable: true, audio: "audio/tracks/neon_horizon.mp3", cover: "images/covers/neon_horizon.jpg" },
-            { id: 8, name: "Retro Drive", duration: "0:15", playable: true, audio: "audio/tracks/retro_drive.mp3", cover: "images/covers/retro_drive.jpg" },
-            { id: 9, name: "Laser Run", duration: "0:15", playable: true, audio: "audio/tracks/laser_run.mp3", cover: "images/covers/laser_run.jpg" }
-        ];
+    let popularSongs = songs.filter(song => song.artistId === selectedArtist.id);
+    const otherSongs = songs.filter(song => song.artistId !== selectedArtist.id);
+    while (popularSongs.length < 3 && otherSongs.length > 0) {
+        popularSongs.push(otherSongs.shift());
     }
 
     // 4. Render Layout
@@ -212,6 +208,34 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         renderPopularTracks(popularSongs);
+    }
+
+    function renderArtistList(artists) {
+        const detailsContainer = document.getElementById('artist-details-container');
+        if (!detailsContainer) return;
+        document.title = 'Songscape - Artists';
+
+        detailsContainer.innerHTML = `
+            <div class="artist-list-page">
+                <div class="artist-list-header glass-card">
+                    <h1>Meet the Artists</h1>
+                    <p>Explore all Songscape artists and tap a profile to view their tracks, bio, and preview audio.</p>
+                </div>
+                <div class="artist-list-grid">
+                    ${artists.map(artist => `
+                        <a href="artist.html?id=${artist.id}" class="artist-card glass-card">
+                            <div class="artist-card-image">
+                                <img src="${artist.avatar}" alt="${artist.name}">
+                            </div>
+                            <div class="artist-card-content">
+                                <h3>${artist.name}</h3>
+                                <p>${artist.genre}</p>
+                            </div>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+        `;
     }
 
     // Render popular tracks list
