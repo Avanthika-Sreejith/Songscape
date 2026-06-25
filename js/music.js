@@ -36,7 +36,7 @@ const songsData = [
 ];
 
 // Save songs data to localStorage so other pages can read it
-const songscapeDataVersion = 3;
+const songscapeDataVersion = 10;
 const storedSongsVersion = parseInt(localStorage.getItem('songscape_songs_version'), 10);
 if (storedSongsVersion !== songscapeDataVersion) {
     localStorage.setItem('songscape_songs', JSON.stringify(songsData));

@@ -38,7 +38,7 @@ const defaultSongs = [
     }
 ];
 
-const artistSongsVersion = 3;
+const artistSongsVersion = 10;
 const storedArtistSongsVersion = parseInt(localStorage.getItem('songscape_songs_version'), 10);
 if (storedArtistSongsVersion !== artistSongsVersion) {
     localStorage.setItem('songscape_songs', JSON.stringify(defaultSongs));
