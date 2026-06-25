@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${coverPath}" alt="${track.name}" class="track-img" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80'">
                     <div class="track-info">
                         <div class="track-title">${track.name}</div>
-                        <div class="track-duration">${durationText} ${isPlayable ? '(Demo Audio)' : '(Upcoming Album)'}</div>
+                        <div class="track-duration">${durationText} ${isPlayable ? '(Preview)' : '(Upcoming Album)'}</div>
                     </div>
                 </div>
                 <div class="track-right">
