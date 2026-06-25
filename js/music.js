@@ -36,7 +36,12 @@ const songsData = [
 ];
 
 // Save songs data to localStorage so other pages can read it
-localStorage.setItem('songscape_songs', JSON.stringify(songsData));
+const songscapeDataVersion = 3;
+const storedSongsVersion = parseInt(localStorage.getItem('songscape_songs_version'), 10);
+if (storedSongsVersion !== songscapeDataVersion) {
+    localStorage.setItem('songscape_songs', JSON.stringify(songsData));
+    localStorage.setItem('songscape_songs_version', String(songscapeDataVersion));
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     // 2. Global State variables

@@ -35,6 +35,13 @@ const defaultSongs = [
     }
 ];
 
+const artistSongsVersion = 3;
+const storedArtistSongsVersion = parseInt(localStorage.getItem('songscape_songs_version'), 10);
+if (storedArtistSongsVersion !== artistSongsVersion) {
+    localStorage.setItem('songscape_songs', JSON.stringify(defaultSongs));
+    localStorage.setItem('songscape_songs_version', String(artistSongsVersion));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Get Songs Data
     const songs = JSON.parse(localStorage.getItem('songscape_songs')) || defaultSongs;
@@ -75,11 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set Page Title
     document.title = `Songscape - Artist Profile: ${artistName}`;
 
-    let popularSongs = songs.filter(song => song.artistId === selectedArtist.id);
-    const otherSongs = songs.filter(song => song.artistId !== selectedArtist.id);
-    while (popularSongs.length < 3 && otherSongs.length > 0) {
-        popularSongs.push(otherSongs.shift());
-    }
+    const popularSongs = songs.filter(song => song.artistId === selectedArtist.id);
 
     // 4. Render Layout
     const detailsContainer = document.getElementById('artist-details-container');
