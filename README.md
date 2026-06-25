@@ -25,6 +25,13 @@ https://github.com/Avanthika-Sreejith/Songscape
 - Responsive design for all screen sizes
 - Hover effects and animations
 - Footer with navigation links
+- Dark/Light theme toggle
+- Music search functionality
+- Filter songs by artist
+- Favorite playlist feature
+- Responsive hamburger menu
+- Email integration for the contact form
+
 
 ---
 
@@ -157,17 +164,6 @@ cd Songscape
 or
 
 Use the Live Server extension in Visual Studio Code.
-
----
-
-## Future Improvements
-
-- Dark/Light theme toggle
-- Music search functionality
-- Filter songs by artist
-- Favorite playlist feature
-- Responsive hamburger menu
-- Email integration for the contact form
 
 ---
 
