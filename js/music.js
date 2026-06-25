@@ -34,41 +34,6 @@ const songsData = [
         bio: "Kontraa - Afro-pop single in the library."
     }
 ];
-    ,
-    {
-        id: 10,
-        name: "Escape Your Love",
-        artist: "Fassounds",
-        cover: "images/covers/retro_drive.jpg",
-        audio: "audio/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.mp3",
-        genre: "Pop",
-        artistPhone: "7000000000",
-        artistId: 4,
-        bio: "Fassounds - upbeat pop production added to the library."
-    },
-    {
-        id: 11,
-        name: "Acoustic Spring",
-        artist: "Ikoliks AJ",
-        cover: "images/covers/acoustic_whispers.jpg",
-        audio: "audio/ikoliks_aj-acoustic-spring-mothers-day-music-320427.mp3",
-        genre: "Acoustic",
-        artistPhone: "7000000001",
-        artistId: 5,
-        bio: "Ikoliks AJ - gentle acoustic track added to the library."
-    },
-    {
-        id: 12,
-        name: "Water",
-        artist: "Kontraa",
-        cover: "images/covers/sunset_song.jpg",
-        audio: "audio/kontraa-water-afro-pop-music-445661.mp3",
-        genre: "Afro-Pop",
-        artistPhone: "7000000002",
-        artistId: 6,
-        bio: "Kontraa - Afro-pop single added to the library."
-    }
-];
 
 // Save songs data to localStorage so other pages can read it
 localStorage.setItem('songscape_songs', JSON.stringify(songsData));

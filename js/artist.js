@@ -2,102 +2,36 @@
 const defaultSongs = [
     {
         id: 1,
-        name: "Midnight Glow",
-        artist: "Luna Eclipse",
-        cover: "images/covers/midnight_glow.jpg",
-        audio: "audio/tracks/midnight_glow.mp3",
-        genre: "Ambient",
-        artistPhone: "9876543210",
+        name: "Escape Your Love",
+        artist: "Fassounds",
+        cover: "images/covers/retro_drive.jpg",
+        audio: "audio/fassounds-escape-your-love-upbeat-fashion-pop-dance-412230.mp3",
+        genre: "Pop",
+        artistPhone: "7000000000",
         artistId: 1,
-        bio: "Luna Eclipse is an ambient electronic music producer based in Seattle. Known for creating lush soundscapes and deep dreamlike atmospheres, her work blends organic textures with vintage synthesizers."
+        bio: "Fassounds brings bright, upbeat pop energy to the library."
     },
     {
         id: 2,
-        name: "Ocean Breeze",
-        artist: "Kai Ryo",
-        cover: "images/covers/ocean_breeze.jpg",
-        audio: "audio/tracks/ocean_breeze.mp3",
+        name: "Acoustic Spring",
+        artist: "Ikoliks AJ",
+        cover: "images/covers/acoustic_whispers.jpg",
+        audio: "audio/ikoliks_aj-acoustic-spring-mothers-day-music-320427.mp3",
         genre: "Acoustic",
-        artistPhone: "8765432109",
+        artistPhone: "7000000001",
         artistId: 2,
-        bio: "Kai Ryo is an acoustic folk singer-songwriter. Inspired by the waves and coastal winds, his music is characterized by warm acoustic guitars, intimate vocals, and rich storytelling."
+        bio: "Ikoliks AJ offers a warm acoustic melody inspired by springtime."
     },
     {
         id: 3,
-        name: "Neon Horizon",
-        artist: "Cyber Punk",
-        cover: "images/covers/neon_horizon.jpg",
-        audio: "audio/tracks/neon_horizon.mp3",
-        genre: "Synthwave",
-        artistPhone: "7654321098",
+        name: "Water",
+        artist: "Kontraa",
+        cover: "images/covers/ocean_breeze.jpg",
+        audio: "audio/kontraa-water-afro-pop-music-445661.mp3",
+        genre: "Afro-Pop",
+        artistPhone: "7000000002",
         artistId: 3,
-        bio: "Cyber Punk is an electronic project dedicated to high-energy 80s synthwave. Mixing heavy basslines, retro synths, and neon cyberpunk aesthetics, his tracks feel like a drive through a future metropolis."
-    },
-    {
-        id: 4,
-        name: "Starlit Nights",
-        artist: "Luna Eclipse",
-        cover: "images/covers/starlit_nights.jpg",
-        audio: "audio/tracks/starlit_nights.mp3",
-        genre: "Ambient",
-        artistPhone: "9876543210",
-        artistId: 1,
-        bio: "Luna Eclipse is an ambient electronic music producer based in Seattle. Known for creating lush soundscapes and deep dreamlike atmospheres, her work blends organic textures with vintage synthesizers."
-    },
-    {
-        id: 5,
-        name: "Nebula Dream",
-        artist: "Luna Eclipse",
-        cover: "images/covers/nebula_dream.jpg",
-        audio: "audio/tracks/nebula_dream.mp3",
-        genre: "Ambient",
-        artistPhone: "9876543210",
-        artistId: 1,
-        bio: "Luna Eclipse is an ambient electronic music producer based in Seattle. Known for creating lush soundscapes and deep dreamlike atmospheres, her work blends organic textures with vintage synthesizers."
-    },
-    {
-        id: 6,
-        name: "Sunset Song",
-        artist: "Kai Ryo",
-        cover: "images/covers/sunset_song.jpg",
-        audio: "audio/tracks/sunset_song.mp3",
-        genre: "Acoustic",
-        artistPhone: "8765432109",
-        artistId: 2,
-        bio: "Kai Ryo is an acoustic folk singer-songwriter. Inspired by the waves and coastal winds, his music is characterized by warm acoustic guitars, intimate vocals, and rich storytelling."
-    },
-    {
-        id: 7,
-        name: "Acoustic Whispers",
-        artist: "Kai Ryo",
-        cover: "images/covers/acoustic_whispers.jpg",
-        audio: "audio/tracks/acoustic_whispers.mp3",
-        genre: "Acoustic",
-        artistPhone: "8765432109",
-        artistId: 2,
-        bio: "Kai Ryo is an acoustic folk singer-songwriter. Inspired by the waves and coastal winds, his music is characterized by warm acoustic guitars, intimate vocals, and rich storytelling."
-    },
-    {
-        id: 8,
-        name: "Retro Drive",
-        artist: "Cyber Punk",
-        cover: "images/covers/retro_drive.jpg",
-        audio: "audio/tracks/retro_drive.mp3",
-        genre: "Synthwave",
-        artistPhone: "7654321098",
-        artistId: 3,
-        bio: "Cyber Punk is an electronic project dedicated to high-energy 80s synthwave. Mixing heavy basslines, retro synths, and neon cyberpunk aesthetics, his tracks feel like a drive through a future metropolis."
-    },
-    {
-        id: 9,
-        name: "Laser Run",
-        artist: "Cyber Punk",
-        cover: "images/covers/laser_run.jpg",
-        audio: "audio/tracks/laser_run.mp3",
-        genre: "Synthwave",
-        artistPhone: "7654321098",
-        artistId: 3,
-        bio: "Cyber Punk is an electronic project dedicated to high-energy 80s synthwave. Mixing heavy basslines, retro synths, and neon cyberpunk aesthetics, his tracks feel like a drive through a future metropolis."
+        bio: "Kontraa delivers rhythmic afro-pop grooves with a fresh, modern beat."
     }
 ];
 
