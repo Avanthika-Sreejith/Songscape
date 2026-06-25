@@ -26,7 +26,7 @@ const songsData = [
         id: 3,
         name: "Water",
         artist: "Kontraa",
-        cover: "images/covers/ocean_breeze.jpg",
+        cover: "images/covers/nebula_dream.jpg",
         audio: "audio/kontraa-water-afro-pop-music-445661.mp3",
         genre: "Afro-Pop",
         artistPhone: "7000000002",
