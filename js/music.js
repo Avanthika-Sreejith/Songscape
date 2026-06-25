@@ -9,6 +9,7 @@ const songsData = [
         genre: "Pop",
         artistPhone: "7000000000",
         artistId: 1,
+        duration: "0:25",
         bio: "Fassounds - upbeat pop production in the library."
     },
     {
@@ -20,6 +21,7 @@ const songsData = [
         genre: "Acoustic",
         artistPhone: "7000000001",
         artistId: 2,
+        duration: "0:20",
         bio: "Ikoliks AJ - gentle acoustic track in the library."
     },
     {
@@ -31,12 +33,13 @@ const songsData = [
         genre: "Afro-Pop",
         artistPhone: "7000000002",
         artistId: 3,
+        duration: "0:30",
         bio: "Kontraa - Afro-pop single in the library."
     }
 ];
 
 // Save songs data to localStorage so other pages can read it
-const songscapeDataVersion = 10;
+const songscapeDataVersion = 11;
 const storedSongsVersion = parseInt(localStorage.getItem('songscape_songs_version'), 10);
 if (storedSongsVersion !== songscapeDataVersion) {
     localStorage.setItem('songscape_songs', JSON.stringify(songsData));
