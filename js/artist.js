@@ -9,6 +9,7 @@ const defaultSongs = [
         genre: "Pop",
         artistPhone: "7000000000",
         artistId: 1,
+        duration: "0:25",
         bio: "Fassounds brings bright, upbeat pop energy to the library."
     },
     {
@@ -20,6 +21,7 @@ const defaultSongs = [
         genre: "Acoustic",
         artistPhone: "7000000001",
         artistId: 2,
+        duration: "0:20",
         bio: "Ikoliks AJ offers a warm acoustic melody inspired by springtime."
     },
     {
@@ -31,6 +33,7 @@ const defaultSongs = [
         genre: "Afro-Pop",
         artistPhone: "7000000002",
         artistId: 3,
+        duration: "0:30",
         bio: "Kontraa delivers rhythmic afro-pop grooves with a fresh, modern beat."
     }
 ];
