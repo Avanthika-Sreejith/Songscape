@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(song => ({
             ...song,
             playable: true,
-            duration: song.duration || (song.id === 1 ? '0:25' : song.id === 2 ? '0:20' : '0:30')
+            duration: song.duration || '0:30'
         }));
 
     // 4. Render Layout
@@ -258,23 +258,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const trackRow = document.createElement('div');
             trackRow.className = 'track-row';
             
-            let actionBtnHtml = '';
-            if (track.playable) {
-                actionBtnHtml = `
-                    <button class="track-row-play-btn" data-track-idx="${index}" aria-label="Play song">
-                        <i class="fas fa-play"></i>
-                    </button>
-                `;
-            } else {
-                actionBtnHtml = `
-                    <button class="track-row-play-btn" style="background: var(--bg-primary); border: 1px solid var(--border-color); color: var(--text-secondary); cursor: not-allowed; box-shadow: none;" onclick="window.showToast('Demo preview not available for this track', 'info')" aria-label="Preview not available">
-                        <i class="fas fa-lock"></i>
-                    </button>
-                `;
-            }
+            const isPlayable = track.playable !== false;
+            let actionBtnHtml = `
+                <button class="track-row-play-btn" data-track-idx="${index}" aria-label="Play song">
+                    <i class="fas fa-play"></i>
+                </button>
+            `;
 
             // Cover photo path (playable track has activeCover, simulated track can fallback)
             const coverPath = track.cover || activeSong.cover;
+            const durationText = track.duration || '0:30';
 
             trackRow.innerHTML = `
                 <div class="track-left">
@@ -282,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${coverPath}" alt="${track.name}" class="track-img" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=500&q=80'">
                     <div class="track-info">
                         <div class="track-title">${track.name}</div>
-                        <div class="track-duration">${track.duration} ${track.playable ? '(Demo Audio)' : '(Upcoming Album)'}</div>
+                        <div class="track-duration">${durationText} ${isPlayable ? '(Demo Audio)' : '(Upcoming Album)'}</div>
                     </div>
                 </div>
                 <div class="track-right">
