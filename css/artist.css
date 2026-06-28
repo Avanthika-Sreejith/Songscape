@@ -198,6 +198,40 @@
     color: var(--text-secondary);
 }
 
+/* Music Details Card */
+.music-details-card {
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.music-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.music-detail-item {
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.music-detail-label {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.music-detail-item strong {
+    font-size: 1rem;
+    color: var(--text-primary);
+    display: block;
+}
+
 /* Popular Songs Card list */
 .popular-songs-list {
     display: flex;

@@ -93,6 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: song.duration || '0:30'
         }));
 
+    const musicDetails = {
+        genre: artistGenre,
+        totalTracks: popularSongs.length,
+        previewTracks: popularSongs.filter(track => track.playable !== false).length,
+        featuredTrack: popularSongs[0]?.name || 'Coming soon'
+    };
+
     // 4. Render Layout
     const detailsContainer = document.getElementById('artist-details-container');
     if (detailsContainer) {
@@ -123,6 +130,29 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="artist-bio-card glass-card">
                         <h2>Biography</h2>
                         <p>${artistBio}</p>
+                    </div>
+
+                    <!-- Music Details Card -->
+                    <div class="glass-card music-details-card">
+                        <h2>Music Details</h2>
+                        <div class="music-details-grid">
+                            <div class="music-detail-item">
+                                <span class="music-detail-label">Primary Genre</span>
+                                <strong>${musicDetails.genre}</strong>
+                            </div>
+                            <div class="music-detail-item">
+                                <span class="music-detail-label">Total Tracks</span>
+                                <strong>${musicDetails.totalTracks}</strong>
+                            </div>
+                            <div class="music-detail-item">
+                                <span class="music-detail-label">Preview Tracks</span>
+                                <strong>${musicDetails.previewTracks}</strong>
+                            </div>
+                            <div class="music-detail-item">
+                                <span class="music-detail-label">Featured Track</span>
+                                <strong>${musicDetails.featuredTrack}</strong>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Popular Songs List -->
