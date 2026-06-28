@@ -83,6 +83,12 @@ function showToast(message, type = 'info') {
         document.body.appendChild(container);
     }
     
+    const existingToast = container.querySelector('.toast');
+
+    if (existingToast) {
+    existingToast.remove();
+}
+
     const toast = document.createElement('div');
     toast.className = `toast ${type}`;
     
